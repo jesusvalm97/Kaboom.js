@@ -8,7 +8,7 @@ kaboom({
 })
 
 screen("game", () => {
-
+    layers(['bg', 'obj', 'ui'], 'obj')
 })
 
 start("game")
