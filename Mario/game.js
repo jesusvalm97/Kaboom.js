@@ -43,7 +43,7 @@ scene("game", () => {
         '=': [sprite('block', solid())]
     }
 
-    const gamLevel = addLevel(map, levelCfg)
+    const gameLevel = addLevel(map, levelCfg)
 })
 
 start("game")
