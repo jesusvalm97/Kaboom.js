@@ -7,21 +7,43 @@ kaboom({
 
 })
 
-loadSprite('coin', 'Mario\Images\coin.png')
-loadSprite('evil-shroom', 'Mario\Images\evil-shroom.png')
-loadSprite('brick', 'Mario\Images\brick.png')
-loadSprite('block', 'Mario\Images\block.png')
-loadSprite('mario', 'Mario\Images\mario.png')
-loadSprite('mushroom', 'Mario\Images\mushroom.png')
-loadSprite('surprise', 'Mario\Images\surprise.png')
-loadSprite('unboxed', 'Mario\Images\laInnombrable.png') //es unboxed pero no se le puede poner así por una palabra reservada
-loadSprite('pipe-top-left', 'Mario\Images\pipe-top-left.png')
-loadSprite('pipe-top-right', 'Mario\Images\pipe-top-right.png')
-loadSprite('pipe-bottom-left', 'Mario\Images\pipe-bottom-left.png')
-loadSprite('pipe-bottom-right', 'Mario\Images\mushroom.png')
+loadRoot('https://i.imgur.com/')
+loadSprite('coin', 'wbKxhcd.png')
+loadSprite('evil-shroom', 'KPO3fR9.png')
+loadSprite('brick', 'pogC9x5.png')
+loadSprite('block', 'M6rwarW.png')
+loadSprite('mario', 'Wb1qfhK.png')
+loadSprite('mushroom', '0wMd92p.png')
+loadSprite('surprise', 'gesQ1KP.png')
+loadSprite('unboxed', 'bdrLpi6.png')
+loadSprite('pipe-top-left', 'ReTPiWY.png')
+loadSprite('pipe-top-right', 'hj2GK4n.png')
+loadSprite('pipe-bottom-left', 'c1cYSbt.png')
+loadSprite('pipe-bottom-right', 'nqQ79eI.png')
 
 screen("game", () => {
     layers(['bg', 'obj', 'ui'], 'obj')
+
+    const map = [
+        '                                 ',
+        '                                 ',
+        '                                 ',
+        '                                 ',
+        '                                 ',
+        '                                 ',
+        '                                 ',
+        '                                 ',
+        '                                 ',
+        '===========================  ====',
+    ]
+
+    const levelCfg = {
+        width: 20,
+        height: 20,
+        '=': [sprite('block', solid())]
+    }
+
+    const gamLevel = addLevel(map, levelCfg)
 })
 
 start("game")
